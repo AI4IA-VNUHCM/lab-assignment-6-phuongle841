@@ -15,6 +15,15 @@ Ex:
 
 void Ex4(char *str){
 	//Your codes here
+	for (int i = 0; i < strlen(str); i++)
+	{
+		printf("%c",str[i]);
+		if (str[i]==' '&&str[i+1]==' '||str[i]==' '&&str[i+1]==' '&&str[i+2]==' ')
+		{
+			i=i+1;
+		}	
+	}
+
 	
 }
 
@@ -26,3 +35,5 @@ int main(int argc, char *argv[]) {
 
 	return 0;
 }
+//gcc .\src\Exercise4.c -o .\bin\exe4.exe
+//.\bin\exe4.exe "  this  is an   unformatted  string "

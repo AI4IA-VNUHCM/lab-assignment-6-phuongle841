@@ -14,7 +14,7 @@ Ex:
 
 void Ex2(int n, char *str[]){
 	//Your codes here
-	
+	printf("%d",n);
 }
 
 int main(int argc, char *argv[]) {
@@ -30,3 +30,5 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
+//gcc .\src\Exercise2.c -o .\bin\exe2.exe
+//.\bin\exe2.exe one two three
