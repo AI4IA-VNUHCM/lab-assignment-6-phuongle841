@@ -15,7 +15,9 @@ Ex:
 
 void Ex3(char *str){
 	//Your codes here
-	
+	int n;
+	n=sizeof(str)/sizeof(char);
+	printf("this is the number of string %d",n);
 }
 
 int main(int argc, char *argv[]) {
@@ -26,3 +28,5 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
+//gcc .\src\Exercise3.c -o .\bin\exe3.exe
+//.\bin\exe3.exe "This is a string with shortest and longest word"
