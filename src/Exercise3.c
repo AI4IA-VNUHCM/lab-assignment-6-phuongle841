@@ -15,37 +15,36 @@ Ex:
 
 void Ex3(char *str){
 	//Your codes here
-	int n=strlen(str);
-	int Index;
-	int Max=1;
-	int MaxPosition=0;
-	int Min=1;
-	int MinPosition=0;
-	int i=0;
-	for (int i = 0; i < n; i=i+Index)
+int Tam=0;
+int n=strlen(str);
+int MaxString=0;
+int VitriStringmax;
+for (int i = 0; i < n; i++)
+{
+	if (str[i]!=' ')
+	{
+		Tam=Tam+1;
+	}
+	else
+	{
+		if (Tam>MaxString)
 		{
-			if (str[i]!=' ')
-			{	
-				Index=1;
-				for (int j = i; str[j] !=0; j++)
-				{
-					Index=Index+1;
-				}
-				if (Index>Max)
-				{
-					MaxPosition=i;
-					Max=Index;
-				}
-				
-				
-			}
-			
+			MaxString=Tam;
+			VitriStringmax=i-Tam;
+			Tam=0;
+		}	
+		else
+		{
+			Tam=0;
 		}
-	printf("this is the longest str %d",Max);	
-	
-	
-	
-	
+		
+	}	
+}
+for (int i = VitriStringmax; i < VitriStringmax+ MaxString; i++)
+{
+	printf("%c",str[i]);
+}
+
 }
 
 int main(int argc, char *argv[]) {
