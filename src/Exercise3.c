@@ -64,17 +64,16 @@ for (int i = 0; i < n; i++)
 		
 	}	
 }
-printf("Longest word: ");
-for (int i = VitriStringmax; i < VitriStringmax+ MaxString; i++)
-{
-	printf("%c",str[i]);
-}
-printf("\nShortest word: ");
+printf("Shortest word: ");
 for (int i = VitriStringmin; i <= VitriStringmin+ MinString; i++)
 {
 	printf("%c",str[i]);
 }
-
+printf("\nLongest word: ");
+for (int i = VitriStringmax; i < VitriStringmax+ MaxString; i++)
+{
+	printf("%c",str[i]);
+}
 }
 
 int main(int argc, char *argv[]) {
