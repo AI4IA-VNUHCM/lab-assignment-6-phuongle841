@@ -69,7 +69,8 @@ for (int i = VitriStringmin; i <= VitriStringmin+ MinString; i++)
 {
 	printf("%c",str[i]);
 }
-printf("\nLongest word: ");
+printf("\n");
+printf("Longest word: ");
 for (int i = VitriStringmax; i < VitriStringmax+ MaxString; i++)
 {
 	printf("%c",str[i]);
