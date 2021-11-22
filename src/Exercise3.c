@@ -71,7 +71,7 @@ for (int i = VitriStringmin; i <= VitriStringmin+ MinString; i++)
 }
 printf("\n");
 printf("Longest word: ");
-for (int i = VitriStringmax; i < VitriStringmax+ MaxString; i++)
+for (int i = VitriStringmax; i <= VitriStringmax+ MaxString; i++)
 {
 	printf("%c",str[i]);
 }
@@ -87,3 +87,4 @@ int main(int argc, char *argv[]) {
 }
 //gcc .\src\Exercise3.c -o .\bin\exe3.exe
 //.\bin\exe3.exe "This is a string with shortest and longest word"
+ 
