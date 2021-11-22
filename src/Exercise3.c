@@ -15,9 +15,37 @@ Ex:
 
 void Ex3(char *str){
 	//Your codes here
-	int n;
-	n=sizeof(str)/sizeof(char);
-	printf("this is the number of string %d",n);
+	int n=strlen(str);
+	int Index;
+	int Max=1;
+	int MaxPosition=0;
+	int Min=1;
+	int MinPosition=0;
+	int i=0;
+	for (int i = 0; i < n; i=i+Index)
+		{
+			if (str[i]!=' ')
+			{	
+				Index=1;
+				for (int j = i; str[j] !=0; j++)
+				{
+					Index=Index+1;
+				}
+				if (Index>Max)
+				{
+					MaxPosition=i;
+					Max=Index;
+				}
+				
+				
+			}
+			
+		}
+	printf("this is the longest str %d",Max);	
+	
+	
+	
+	
 }
 
 int main(int argc, char *argv[]) {
