@@ -19,6 +19,8 @@ int Tam=0;
 int n=strlen(str);
 int MaxString=0;
 int VitriStringmax;
+int MinString=n;
+int VitriStringmin;
 for (int i = 0; i < n; i++)
 {
 	if (str[i]!=' ')
@@ -40,7 +42,35 @@ for (int i = 0; i < n; i++)
 		
 	}	
 }
+Tam=0;
+for (int i = 0; i < n; i++)
+{
+	if (str[i]!=' ')
+	{
+		Tam=Tam+1;
+	}
+	else
+	{
+		if (Tam<MinString)
+		{
+			MinString=Tam;
+			VitriStringmin=i-Tam;
+			Tam=0;
+		}	
+		else
+		{
+			Tam=0;
+		}
+		
+	}	
+}
+printf("Longest word: ");
 for (int i = VitriStringmax; i < VitriStringmax+ MaxString; i++)
+{
+	printf("%c",str[i]);
+}
+printf("\nShortest word: ");
+for (int i = VitriStringmin; i <= VitriStringmin+ MinString; i++)
 {
 	printf("%c",str[i]);
 }
