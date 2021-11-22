@@ -14,34 +14,35 @@ void Ex1(int n){
 	//Your codes here
 	int a,b,c,d;
 	a= floor(n/1000);
+	
 	switch (a)
 	{
 	case 1:
-		printf("one thousand ");
+		printf(" one thousand ");
 		break;
 	case 2:
-		printf("two thousand ");
+		printf(" two thousand ");
 		break;
 	case 3:
-		printf("three thousand ");
+		printf(" three thousand ");
 		break;
 	case 4:
-		printf("four thousand ");
+		printf(" four thousand ");
 		break;
 	case 5:
-		printf("five thousand ");
+		printf(" five thousand ");
 		break;
 	case 6:
-		printf("six thousand ");
+		printf(" six thousand ");
 		break;
 	case 7:
-		printf("seven thousand ");
+		printf(" seven thousand ");
 		break;	
 	case 8:
-		printf("eight thousand ");
+		printf(" eight thousand ");
 		break;
 	case 9:
-		printf("nine thousand ");
+		printf(" nine thousand ");
 		break;					
 	default:
 	printf(" ");
@@ -82,11 +83,10 @@ void Ex1(int n){
 		break;
 	}
 	c=(n-1000*a-b*100)/10;
+	if (c!=1)
+	{
 	switch (c)
 	{
-	case 1:
-		printf("onety ");
-		break;
 	case 2:
 		printf("twenty ");
 		break;
@@ -149,7 +149,45 @@ void Ex1(int n){
 	printf(" ");
 		break;
 	}
-
+	}
+	else
+	{
+		d=n-1000*a-b*100-c*10;
+	switch (d)
+	{
+	case 1:
+		printf("eleven");
+		break;
+	case 2:
+		printf("twelve");
+		break;
+	case 3:
+		printf("thirteen");
+		break;
+	case 4:
+		printf("fourteen");
+		break;
+	case 5:
+		printf("fifteen ");
+		break;
+	case 6:
+		printf("sixteen ");
+		break;
+	case 7:
+		printf("seventeen ");
+		break;	
+	case 8:
+		printf("eighteen ");
+		break;
+	case 9:
+		printf("nineteen ");
+		break;					
+	default:
+	printf(" ");
+		break;
+	}
+	}
+	
 }
 
 int main(int argc, char *argv[]) {
